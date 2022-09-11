@@ -1,0 +1,268 @@
+:root {
+  --BrightBlue: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradienthsl(192, 100%, 67%) tohsl(280, 87%, 65%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+  --LightGrayishBlue: hsl(233, 11%, 84%);
+  --DarkGrayishBlue: hsl(236, 9%, 61%);
+  --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+  --VeryDarkBlue: hsl(235, 21%, 11%);
+  --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --LightGrayishBlue: hsl(234, 39%, 85%);
+  --LightGrayishBlueHover: hsl(236, 33%, 92%);
+  --DarkGrayishBlue: hsl(234, 11%, 52%);
+  --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.radio {
+  height: 20px;
+  width: 20px;
+  border: solid 1px hsl(236, 9%, 61%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.active {
+  text-decoration: line-through;
+  color: var(--DarkGrayishBlue);
+}
+
+main {
+  height: 100vh;
+}
+
+.bg-image {
+  position: absolute;
+  height: 30vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.bg-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 47px 10px;
+}
+
+.first-section h2 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.first-section form {
+  width: 100%;
+  background-color: white;
+  height: 46px;
+  margin-top: 37px;
+  /* border-radius: 5px 0 0 5px; */
+}
+
+.input-holder {
+  display: flex;
+  height: 46px;
+  align-items: center;
+  width: 100%;
+}
+
+.input-holder input {
+  border: none;
+  outline: none;
+  height: 46px;
+
+  margin-left: 10px;
+}
+
+.input-holder input::placeholder {
+  font-size: 12px;
+}
+
+.circle-holder {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.input-container input {
+  width: 100%;
+  padding-right: 10px;
+}
+
+.circle-main {
+  border-radius: 50%;
+  height: 19px;
+  width: 19px;
+  border: solid 1px hsl(236, 9%, 61%);
+}
+
+.cross {
+  height: 15px;
+}
+
+.second-section {
+  height: auto;
+  background-color: white;
+  margin-top: 15px;
+  padding: 15px 20px;
+  min-height: 30px;
+  box-shadow: -4px 14px 5px 3px rgba(0, 0, 0, 0.09);
+}
+
+.tasksleft--clr {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--DarkGrayishBlue);
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  border-bottom: solid #e6e5ea 1px;
+  padding-bottom: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.radio-text {
+  display: flex;
+  align-items: center;
+}
+
+.radio-text p {
+  font-size: 12px;
+}
+
+.radio svg {
+  height: 1px;
+}
+
+.input {
+  /* text-align: ; */
+  color: #afaeb4;
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.radio-text p {
+  color: #6b6a73;
+  padding-top: 5px;
+}
+
+.tasks-array > * {
+  padding-bottom: 20px;
+}
+
+.clr-all {
+  cursor: pointer;
+}
+
+.filter-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 50px;
+  background-color: white;
+  margin-top: 30px;
+  box-shadow: -4px 14px 5px 3px rgba(0, 0, 0, 0.09);
+}
+
+.filter-container > p {
+  cursor: pointer;
+  color: #6b6a73;
+}
